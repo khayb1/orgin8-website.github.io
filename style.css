@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    /* overflow-x: hidden; */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -13,21 +14,24 @@
     --bg-color:  #FFE382;
     --second-bg-color: #FFF78A;
     --text-color: #111;
+    --second-text-color: #fff;
     --second-color: #333;
     --main-color: #FFC93C;
-    transition: 1.5s ease-in-out;
+    --transition: 1.5s ease-in-out;
+
   }
 
 
   /* navbar section */
 .navbar{
-    padding: 0;
-
+padding: 0;
     
   
 }
   .container-fluid{
     margin: 0;
+    padding: 20px 0;
+
     background-color: #fff;
     display: flex; 
     align-items: center;
@@ -65,7 +69,7 @@
 /* search */
 .search{
     border-radius: 5px ;
-    border: none;
+   
 }
 .search:placeholder-shown{
     padding-left: 15px;
@@ -89,7 +93,7 @@
 .nav-2{
     margin: 0;
     transition: 1s ease;
-    /* width: 100vw; */
+    
 
 }
  .nav-2 ul{
@@ -97,7 +101,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    /* font-size: 1.3rem; */
+   
     font-weight: bold;
     padding: 20px 0;
     background-color:var(--main-color);
@@ -221,7 +225,7 @@ position: relative;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 600;
-    color:white ;
+    color:var(--second-text-color) ;
     
    
 }
@@ -231,7 +235,7 @@ position: relative;
 .marketing-container button, .marketing-container-2 button{
     text-align: left;
     font-size:0.9rem ;
-    background-color: white;
+    background-color: var(--second-text-color);
     padding: 0.5rem 1.3rem;
     margin:0 auto 0 0 ;
     border-radius: 5px;
@@ -246,7 +250,7 @@ position: relative;
 .marketing-section-2{
         background: url(images/earth.jpg) center/cover;
         position: relative;
-        margin-bottom: 5rem;
+        
 }
 
 .marketing-container-2{
@@ -262,15 +266,213 @@ position: relative;
     margin:0 0.7rem 2rem 0;
 }
 
+/* services */
+.services{
+    background-color: #222;
+    color: var(--second-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+
+}
+
+  
+.services-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    text-align: center;
+    row-gap: 2rem;
+
+}
+.services-items{
+    padding:10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 300px;
+    height: 240px;
+    border: 1px solid #333;    
+}
+
+.services-items a:nth-child(1):hover{
+    opacity: 0.5;
+}
+.services-items a:nth-child(2){
+    font-size: 1rem;
+    margin-top: 0.5rem;
+   text-decoration: none;
+   color: var(--second-text-color);
+}
+.services-items a:nth-child(2):hover{
+    color: var(--main-color);
+}
 
 
+/* works section  */
+.works{
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.works >h3{
+    padding: 2rem 0;
+    font-weight: 600;
+}
+.carousel-inner{
+ 
+    margin: 0 auto;
+ 
+}
+.carousel-item{ 
+
+     width: 100vw;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+   
+
+}
+.carousel-item > img{
+
+    height: 100%;
+    object-fit: cover;
+    object-position:center ;
+}
+
+.work-btn{
+    margin-top: 2rem;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    background-color: #ED9F2e;
+    color: var(--second-text-color);
+
+    transition: var(--transition);
+}
+
+.work-btn:hover{
+font-weight: 500;
+border-radius: 5px;
+}
+
+/* clients section  */
+.clients{
+    text-align: center;
+}
+.clients > h3{
+    margin-top: 5rem;
+    font-size: 2.5rem;
+}
+
+.client-container{
+margin:5% 10%;
+display: flex;
+overflow: hidden;
+
+}
+.client-item{
+    display: flex;
+    width: 500px;
+    height: 250px;
+    margin: 1rem 2rem;
+}
+.clients > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* contact section  */
+.contact{
+    color: var(--main-color);
+    background-color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding:2rem 6%;
+
+}
+.quick-links{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;  
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    padding:1rem 5px;
+}
+.links > a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--second-text-color);
+   
+}
+.links > a:hover{
+    color: var(--main-color);
+}
+
+.contact-icons > a{
+    font-size: 2rem;
+    color: var(--main-color);
+    padding-right: 1rem;
+    text-decoration: none;
+}
+.contact-icons > a:hover, :active{
+opacity: 0.5;
+}
+
+
+.sign-up h3{
+    font-size: 2.5rem;
+}
+.sin-up span{
+    display: block;
+}
+
+.email {
+    padding-top: 2rem;
+}
+
+.email input{
+    width: 25rem;
+    height: 3rem;
+    margin: 0;
+}
+.email input::placeholder{
+    padding-left: 10px;
+    font-size:0.8rem; 
+}
+
+.sign-up-btn{
+    background-color: var(--main-color);
+    color: var(--second-text-color);
+    font-size: 0.9rem;
+    padding:0.8rem ;
+    width: 6rem;
+}
+
+footer{
+    background-color: var(--text-color);
+    color: var(--second-text-color);
+    text-align: left;
+    padding: 5%;
+}
 
 
 /* for smaller screens */
 @media (max-width:900px){
     .container-fluid{
         text-align: center;
-        padding-bottom: 10px;
+        padding: 0 0 10px 0;
     }
     .nav-item:hover{
         border:none;
@@ -283,13 +485,68 @@ position: relative;
     .nav-2 ul li{
         font-size: 1rem;
     }
-    .marketing-container, .marketing-container-2{
+
+    /* marketing section  */
+ .marketing-container, .marketing-container-2{
         margin: 10px;
+}
+.marketing-container-2 button{
+    margin:0 auto 0 0 ; ;
+}
+
+/* serives section  */
+.services-content{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    text-align: center;
+    row-gap: 2rem;
+
 }
 
 
-.marketing-container-2 button{
-    margin:0 auto 0 0 ; ;
 
+/* work section   */
+.carousel-item{ 
+
+    height: 80vh; 
+     width: 100vw;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: all .5s ease;
+
+}
+
+/* contact section  */
+.contact{
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding:2rem 6%;
+
+}
+.quick-links{
+    margin-bottom: 10%;
+}
+
+.sign-up h3{
+    text-align: center;
+}
+form{
+    display: flex;
+}
+#email{
+    flex-grow:1 ;
+    width: auto;
+}
+
+
+footer{
+    text-align: center;
 }
 }
