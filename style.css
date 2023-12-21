@@ -464,7 +464,7 @@ footer{
     background-color: var(--text-color);
     color: var(--second-text-color);
     text-align: left;
-    padding: 5%;
+    padding: 1% 5% 1% 5% ;
 }
 
 
@@ -495,16 +495,6 @@ footer{
 }
 
 /* serives section  */
-.services-content{
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
-    text-align: center;
-    row-gap: 2rem;
-
-}
 
 
 
