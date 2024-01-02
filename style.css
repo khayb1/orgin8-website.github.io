@@ -138,8 +138,6 @@ padding: 0;
 }
 /* hero section */
 .hero{
-  
-   
    object-position:center;
    object-fit:contain ;
    overflow: hidden;
@@ -354,9 +352,7 @@ position: relative;
     font-weight: 600;
 }
 .carousel-inner{
- 
     margin: 0 auto;
- 
 }
 .carousel-item{ 
      width: 100vw;
