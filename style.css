@@ -2,12 +2,12 @@
 * {
     padding: 0;
     margin: 0;
-    /* overflow-x: hidden; */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+   
   }
  
   :root{
@@ -55,10 +55,14 @@ padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
 
 }
-.nav-item:hover{
+.nav-link:hover{
     border-bottom: 2px solid var(--main-color);
+    transform-origin: 100% 50%;
+     
 }
 
 /* icons on nav-items */
@@ -92,7 +96,7 @@ padding: 0;
 /* 2nd navbar */
 .nav-2{
     margin: 0;
-    transition: 1s ease;
+   
     
 
 }
@@ -101,7 +105,6 @@ padding: 0;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-   
     font-weight: bold;
     padding: 20px 0;
     background-color:var(--main-color);
@@ -109,19 +112,34 @@ padding: 0;
     margin: 0;
 } 
 .nav-2 ul li{
+    display: flex;
     font-size: 1.5rem;
-}
-
-.nav-2 ul li:hover{
-    cursor:pointer ;
-    border-bottom: 2px solid var(--second-bg-color);
+    justify-content: center;
+    align-items: center;
 }
 
 
+.nav-2 a{
+    text-decoration: none;
+    color: var(--text-color);
+  
+}
+.nav-2 a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--second-bg-color);
+    transition: width .3s;
+    cursor: pointer;
+}
+.nav-2 a:hover::after{
+    width: 100%;
+}
 /* hero section */
 .hero{
   
-   /* width:100vw; */
+   
    object-position:center;
    object-fit:contain ;
    overflow: hidden;
@@ -329,6 +347,7 @@ position: relative;
     text-align: center;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 .works >h3{
     padding: 2rem 0;
@@ -340,21 +359,52 @@ position: relative;
  
 }
 .carousel-item{ 
-
      width: 100vw;
     margin: 0;
     object-fit: cover;
     object-position: center;
-   
+    position: relative;
+    cursor: pointer;
+
+}
+
+.img-container{
+    margin: auto;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
 
 }
 .carousel-item > img{
-
     height: 100%;
     object-fit: cover;
     object-position:center ;
 }
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 246, 246, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 1s ease;
 
+}
+.overlay > p{
+   color:var(--text-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+}
+.overlay:hover{
+    opacity: 1;
+}
 .work-btn{
     margin-top: 2rem;
     padding: 0.5rem 2.5rem;
@@ -434,7 +484,7 @@ overflow: hidden;
     padding-right: 1rem;
     text-decoration: none;
 }
-.contact-icons > a:hover, :active{
+.contact-icons > a:hover :active{
 opacity: 0.5;
 }
 
@@ -457,6 +507,10 @@ opacity: 0.5;
     height: 3rem;
     margin: 0;
 }
+.email input:focus{
+    outline-color: var(--main-color);
+
+}
 .email input::placeholder{
     padding-left: 10px;
     font-size:0.8rem; 
@@ -478,12 +532,13 @@ footer{
 }
 
 /* animation section  */
-.hidden, .hide{
+ .hidden{
     opacity: 0; 
     filter:blur(5px);
      transform: translateX(-100%);
     transition: all 1s;
 }
+
 .hide{
     opacity: 0; 
     filter:blur(5px);
@@ -501,7 +556,7 @@ footer{
     opacity: 1;
     filter: blur(0);
     transform: scale(100%);
-}
+} 
 
 /* for smaller screens */
 @media (max-width:900px){
@@ -535,7 +590,6 @@ footer{
 
 /* work section   */
 .carousel-item{ 
-
     height: 80vh; 
      width: 100vw;
     margin: auto;
