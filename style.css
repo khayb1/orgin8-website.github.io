@@ -96,9 +96,6 @@ padding: 0;
 /* 2nd navbar */
 .nav-2{
     margin: 0;
-   
-    
-
 }
  .nav-2 ul{
     display: flex;
@@ -107,7 +104,7 @@ padding: 0;
     gap: 1rem;
     font-weight: bold;
     padding: 20px 0;
-    background-color:var(--main-color);
+    background-color:var(--bg-color);
     color: var(--text-color);
     margin: 0;
 } 
@@ -128,8 +125,8 @@ padding: 0;
     content: '';
     display: block;
     width: 0;
-    height: 2px;
-    background: var(--second-bg-color);
+    height: 3px;
+    background: var(--main-color);
     transition: width .3s;
     cursor: pointer;
 }
@@ -218,7 +215,7 @@ padding: 0;
 /* markting section 1*/
 .marketing-section {
 background: url(images/2021.jpg)   center/cover;
-/* height: 50vh; */
+
 position: relative;
 
 
@@ -313,14 +310,14 @@ position: relative;
 
 }
 .services-items{
-    padding:10px ;
+    padding:5px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    width: 300px;
-    height: 240px;
+    width: 280px;
+   min-height: 240px;
     border: 1px solid #333;    
 }
 
@@ -329,8 +326,8 @@ position: relative;
     opacity: 0.5;
 }
 .services-items a:nth-child(2){
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
    text-decoration: none;
    color: var(--second-text-color);
 }
@@ -340,42 +337,44 @@ position: relative;
 
 
 /* works section  */
+
 .works{
-    background-color: var(--main-color);
+
     text-align: center;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
+    background-color: var(--main-color);
+    
 }
+.carousel{
+    margin:0 auto ;
+    padding: 0; 
+   overflow: hidden;
+   width: 25vw;
+   position: relative;
+}
+
+.carousel-item{ 
+    display: block;
+    margin: 0 auto;
+    transition: all .5s ease;
+  
+}
+
+
+.carousel-item img{
+    display: block;
+      width: 100%;
+      height: 100%;
+      object-fit:fill;
+      object-position: center;
+  
+}
+
 .works >h3{
     padding: 2rem 0;
     font-weight: 600;
 }
-.carousel-inner{
-    margin: 0 auto;
-}
-.carousel-item{ 
-     width: 100vw;
-    margin: 0;
-    object-fit: cover;
-    object-position: center;
-    position: relative;
-    cursor: pointer;
 
-}
 
-.img-container{
-    margin: auto;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-
-}
-.carousel-item > img{
-    height: 100%;
-    object-fit: cover;
-    object-position:center ;
-}
 .overlay{
     position: absolute;
     top: 50%;
@@ -394,7 +393,7 @@ position: relative;
 .overlay > p{
    color:var(--text-color);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.rem;
     text-align: center;
     padding: 20px;
 }
@@ -419,30 +418,37 @@ border-radius: 5px;
 /* clients section  */
 .clients{
     text-align: center;
+    overflow: hidden;
+   
 }
 .clients > h3{
-    margin-top: 5rem;
-    font-size: 2.5rem;
+    padding: 3rem 0;
 }
-
-.client-container{
-margin:5% 10%;
-display: flex;
-overflow: hidden;
-
-}
-.client-item{
+.swiper{
     display: flex;
-    width: 450px;
-    height: 250px;
-    margin: 1rem 2rem;
-}
-.clients > img{
+    justify-content: center;
+    align-items: center;
+    width: 950px;
+    height: 400px;
+    
+} 
+
+
+.swiper-slide{
+width: 375px;
+height: 300px;
+cursor: grab;
+padding: 10px;
+
+}  
+.swiper img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
+.swiper-pagination{
+   opacity: 1;
+}
+
 
 /* contact section  */
 .contact{
@@ -580,11 +586,24 @@ footer{
     margin:0 auto 0 0 ; ;
 }
 
-/* serives section  */
+.services-items{
+    padding:10px ;
+
+    width: 200px;
+    height: 160px;
+    border: 1px solid #333;    
+}
 
 
 
 /* work section   */
+.carousel{
+    margin:0 auto ;
+    padding: 0; 
+   overflow: hidden;
+   width: 35vw;
+   position: relative;
+}
 .carousel-item{ 
     height: 80vh; 
      width: 100vw;
@@ -595,6 +614,21 @@ footer{
 
 }
 
+/* clients  */
+.swiper{
+    width:500px;
+    height: 300px;
+    
+} 
+
+
+.swiper-slide{
+width: 250px;
+height: 200px;
+cursor: grab;
+padding: 10px;
+
+}
 /* contact section  */
 .contact{
    
@@ -624,4 +658,23 @@ form{
 footer{
     text-align: center;
 }
+
+}
+
+@media (max-width: 450px) {
+    /* .services */
+    .services-content{
+        margin: 1%;
+      
+    
+    }
+    .services-items{
+        padding:5px ;
+
+        width: 180px;
+ 
+    }
+    
+    
+    
 }

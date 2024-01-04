@@ -12,15 +12,33 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 
-$(document).ready(function (){
-    $('.slider').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        speed: 500,
-        infinite: true,
-        autoplay: true,
-        centerMode: true,
-        centerPadding:"0",
-      });
-});
+//   carousel
+var carousel = new Swiper(".carousel", {
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+    },
+  });
+
+
+// swiper
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 3,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+     
+    },
+  });
+
