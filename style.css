@@ -524,14 +524,14 @@ footer{
  .hidden{
     opacity: 0; 
     filter:blur(5px);
-     transform: translateX(-100%);
+     transform: scale(0.5);
     transition: all 1s;
 }
 
 .hide{
     opacity: 0; 
     filter:blur(5px);
-     transform:scale(0);
+     transform:scale(1);
     transition: all 1s;
     display: flex;
     flex-direction: column;
@@ -539,12 +539,12 @@ footer{
 .show{
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    transform: scale(0.7);
 }
 .add{
     opacity: 1;
     filter: blur(0);
-    transform: scale(100%);
+    transform: scale(1);
 } 
 
 /* for smaller screens */
